@@ -74,6 +74,7 @@ $(document).ready(function()
 		var extension = 7;
 		var gestion = 6;
 
+		//aca se guardaran los datos que fueron checkeados.
 		var datos_check_on = []; 		
 		
 		recorrer(mejora,'mejora');
@@ -83,6 +84,16 @@ $(document).ready(function()
 		recorrer(investigacion,'investigacion');
 		recorrer(extension,'extension');
 		recorrer(gestion,'gestion');
+
+		//for (var i = 0; i < datos_check_on.length; i++) 
+		//{
+				//alert(datos_check_on[i]);
+				//enviar el check = 'SI'
+				//CANTIDAD
+				//DESCRIPCION
+		//}
+
+		//alert(datos_check_on);
 
 		function recorrer(largo,nombre)
 		{
@@ -99,8 +110,12 @@ $(document).ready(function()
 			}	
 
 		}
-	
-		alert(datos_check_on);
+
+
+
+
+		
+		
 			
 
 	});

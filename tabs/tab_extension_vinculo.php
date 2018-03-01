@@ -13,7 +13,7 @@
   <tr>
     <td></td>
     <td class="opcionCheck">Docencia en educacion continua.</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_docencia1" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_docencia1"></td>
   </tr>
     <tr  id="rw_docencia1">
@@ -24,7 +24,7 @@
   <tr>
     <td></td>
     <td class="opcionCheck">Redes con socios comunitarios para Aprendizaje Servicio.</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_docencia2" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_docencia2"></td>
   </tr>
   <tr  id="rw_docencia2">
@@ -35,7 +35,7 @@
    <tr>
     <td></td>
     <td class="opcionCheck">Instancias de Vinculación (Profesor invitado, colaboracion con centros de alto nivel,etc).</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_docencia3" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_docencia3"></td>
   </tr>
   <tr  id="rw_docencia3">
@@ -51,7 +51,7 @@
    <tr>
     <td></td>
     <td class="opcionCheck"> Ponencias en eventos académicos vinculados al quehacer displinar.</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_investigacion1" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_investigacion1"></td>
   </tr>
   <tr  id="rw_investigacion1">
@@ -62,7 +62,7 @@
    <tr>
     <td></td>
     <td class="opcionCheck"> Divulgación académica (articulos, presentaciones, charlas).</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_investigacion2" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_investigacion2"></td>
   </tr>
   <tr  id="rw_investigacion2">
@@ -73,7 +73,7 @@
    <tr>
     <td></td>
     <td class="opcionCheck">Proyectos internos de extención/vinculo, validados DEV. </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_investigacion3" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_investigacion3"></td>
   </tr>
   <tr  id="rw_investigacion3">
@@ -84,7 +84,7 @@
     <tr>
     <td></td>
     <td class="opcionCheck">Proyectos externos de extención y vinculo (FNDR, Fondar, Explora, etc). </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_investigacion4" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_investigacion4"></td>
   </tr>
   <tr  id="rw_investigacion4">
@@ -95,7 +95,7 @@
     <tr>
     <td></td>
     <td class="opcionCheck">Evaluador en revistas o libros con comites editoriales reconocidos por la UCT. </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_investigacion5" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_investigacion5"></td>
   </tr>
   <tr  id="rw_investigacion5">
@@ -106,7 +106,7 @@
     <tr>
     <td></td>
     <td class="opcionCheck">Integrantes de comités evaluadores de proyectos (FONDECYT, FONDEF, INNOVA, MECESUP).</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_investigacion6" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_investigacion6"></td>
 	</tr>
 	<tr  id="rw_investigacion6">
@@ -123,7 +123,7 @@
     <td></td>
     <td class="opcionCheck">Organización y difusión eventos académicos, artisticos culturales 
   pastorales y/o deportivos, regionales, nacionales, internacionales.</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension1" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension1"></td>
   </tr>
   <tr  id="rw_extension1">
@@ -134,7 +134,7 @@
    <tr>
     <td></td>
     <td class="opcionCheck">Trabajo Socio Comunitario (VAS-Voluntariado).</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension2" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension2"></td>
   </tr>
    <tr  id="rw_extension2">
@@ -146,7 +146,7 @@
     <td></td>
     <td class="opcionCheck"> Representante institucional en comisiones Académicas, Eclesiales y/o Mesa de Trabajo regionales, 
   nacionales, internacionales. </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension3" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension3"></td>
   </tr>
    <tr  id="rw_extension3">
@@ -157,7 +157,7 @@
     <tr>
     <td></td>
     <td class="opcionCheck"> Experto invitado en instancias de gobierno local, regional y nacional. </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension4" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension4"></td>
   </tr>
    <tr  id="rw_extension4">
@@ -168,7 +168,7 @@
     <tr>
     <td></td>
     <td class="opcionCheck">Profesor visitante en universidades extranjeras. </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension5" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension5"></td>
   </tr>
    <tr  id="rw_extension5">
@@ -179,7 +179,7 @@
     <tr>
     <td></td>
     <td class="opcionCheck">Actividades de difusión de carreras.</td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension6" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension6"></td>
   </tr>
    <tr  id="rw_extension6">
@@ -190,7 +190,7 @@
    <tr>
     <td></td>	
     <td class="opcionCheck">Actividades vinculadas a promover el sello institucional como responsable organizador. </td>
-    <td><input type="number" class="form-control" value = "1"></td>
+    <td><input type="number" id="nm_extension7" class="form-control" value = "1"></td>
     <td><input type="checkbox" id="ch_extension7"></td>
   </tr>
    <tr  id="rw_extension7">
