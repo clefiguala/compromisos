@@ -80,8 +80,9 @@ $(document).ready(function()
 		
 		//aca se guardaran los datos que fueron checkeados.
 		var datos_check_on = [];
-
-		var lista_compromisos = ['mejora','otrosp','produccion','docencia','investigacion','extension','gestion']
+		
+		var data = [];
+		var lista_compromisos = ['mejora','otrosp','produccion','docencia','investigacion','extension','gestion'];
 		//recorro las distintas variables y verifico que check fue seleccionado
 
 		lista_compromisos.forEach( function(valor, indice, array)
@@ -91,14 +92,15 @@ $(document).ready(function()
 		//obtengo el rut del docente
 		var rut = $('#inputrut').val();
 		//año actual 
-		var anho = date("Y");
+		var fecha = new Date();
+		var anho = fecha.getFullYear();
+	
 
-		var objeto_enviar = {rut : rut, anho : anho , datos : {}};
+		var objeto_enviar = {rut : rut, anho : anho, datos : {}};
 
 		//recorro el array con los check seleccionado por el usuario.
 		datos_check_on.forEach( function(valor, indice, array)
-		{
-			
+		{			
 			var numero = 'nm_'+valor;			
 			var descripcion = 'txt_'+valor;
 			//obtengo la cantidad del check seleccionado
@@ -107,7 +109,6 @@ $(document).ready(function()
 			var descrip = $('#' + descripcion).val();
 			//se le asigna al check el valor S para ser guardado en la base de datos 
 			var check = 'S';
-
 
 			var regex = /(\d+)/g;
 			
@@ -119,12 +120,26 @@ $(document).ready(function()
 			//obtenemos el area nivel dos (tnvd_codigo)
 			datos_areas(subarea_1,subarea_2);
 
-			alert('area ' +area + 'sub nivel uno '+ sub_1 +' sub nivel dos ' + sub_2);
+			//alert('area ' +area + 'sub nivel uno '+ sub_1 +' sub nivel dos ' + sub_2);
 
-			
+			data[indice] = {
+				area 		: area, 
+				nivel_uno   : sub_1, 
+				nivel_dos   : sub_2[0], 
+				cantidad    : cantidad,
+				descripcion : descrip,
 
-
+			};
 		});
+
+		objeto_enviar.datos= data;
+		console.log(objeto_enviar);
+
+		/* enviadar datos por ajax */
+
+		
+
+		/* funciones */
 
 		function datos_areas(subarea_1,subarea_2)
 		{
@@ -182,9 +197,8 @@ $(document).ready(function()
 					}	
 				}
 			});
-			return {area : area, sub_1 : sub_1, sub_2 : sub_2 }
-		}
-		
+			
+		}		
 
 		function recorrer(largo,nombre)
 		{
@@ -200,13 +214,7 @@ $(document).ready(function()
 				}
 			}	
 
-		}
-
-
-
-
-		
-		
+		}	
 			
 
 	});
