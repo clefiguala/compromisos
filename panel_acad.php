@@ -1,6 +1,6 @@
 <!-- JS EVENTOS CHECK Y TEXTAREA -->
 <script type="text/javascript" src="js/control_check.js"></script> 
-<script type="text/javascript" src="controller/peticiones.js"></script> 
+<script type="text/javascript" src="json/peticiones.js"></script> 
 <script>
 $(document).ready(function() {
 			

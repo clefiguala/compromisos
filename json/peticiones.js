@@ -137,7 +137,29 @@ $(document).ready(function()
 
 		/* enviadar datos por ajax */
 
-		
+		$.ajax
+        ({
+            type        : "POST",
+            url         : 'models/agregar_compromisos.php',
+            data        : objeto_enviar,
+            //contentType : "application/x-www-form-urlencoded",
+            dataType    : "json",
+            contentType: "application/json; charset=utf-8",
+            beforeSend  : function()
+            {
+                $("#datos_reserva").html("<center><img src='images/loader3.gif' style='margin-top:100px;'/><p style='margin-top:1px; margin-left: 10px;'> Cargando...</p></center><br><br>");
+            },
+            success     : function(data)
+            {
+            	
+            },
+            error       : function()
+            {
+                   
+            }
+
+        });
+
 
 		/* funciones */
 
