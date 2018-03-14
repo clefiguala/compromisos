@@ -2,8 +2,11 @@ $(document).ready(function()
 {
 	$("#GuardarCompromiso").click(function () 
 	{
+		var r = confirm("Esta seguro de confirmar sus compromisos");
 
-		// obtener los check
+		if (r == true) 
+		{
+			// obtener los check
 		// el valor que puede venir es on o undefined
 
 
@@ -133,26 +136,25 @@ $(document).ready(function()
 		});
 
 		objeto_enviar.datos= data;
-		console.log(objeto_enviar);
-
+		//console.log(objeto_enviar);
+		datos = objeto_enviar;
 		/* enviadar datos por ajax */
-
+		console.log(datos);
 		$.ajax
         ({
-            type        : "POST",
+            type        : "post",
             url         : 'models/agregar_compromisos.php',
-            data        : objeto_enviar,
-            //contentType : "application/x-www-form-urlencoded",
-            dataType    : "json",
-            contentType: "application/json; charset=utf-8",
+            dataType	: 'json',
+            data 		: {'data':datos},
+            
+            //contentType: "application/json; charset=utf-8",
             beforeSend  : function()
             {
                 $("#datos_reserva").html("<center><img src='images/loader3.gif' style='margin-top:100px;'/><p style='margin-top:1px; margin-left: 10px;'> Cargando...</p></center><br><br>");
             },
-            success     : function(data)
-            {
-            	
-            },
+            success: function (respuestaAjax) {
+		    	alert('Excelente!');
+		    },
             error       : function()
             {
                    
@@ -237,6 +239,10 @@ $(document).ready(function()
 			}	
 
 		}	
+        	
+    	}
+
+		
 			
 
 	});
